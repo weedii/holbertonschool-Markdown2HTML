@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-''' Write a script markdown2html.py that takes an argument 2 strings:
 
-    First argument is the name of the Markdown file
-    Second argument is the output file name
-'''
+"""This script convert a markdown file into html file"""
 
 import sys
 import markdown
@@ -16,6 +13,7 @@ def convert_markdown_to_html(input_file, output_file):
             html_content = markdown.markdown(markdown_content)
             with open(output_file, 'w') as html_file:
                 html_file.write(html_content)
+    # condition if file not found
     except FileNotFoundError:
         sys.stderr.write(f"Missing {input_file}\n")
         sys.exit(1)
@@ -29,5 +27,6 @@ if __name__ == "__main__":
     input_file = sys.argv[1]
     output_file = sys.argv[2]
 
+    # call the function to covert md into html
     convert_markdown_to_html(input_file, output_file)
     sys.exit(0)
