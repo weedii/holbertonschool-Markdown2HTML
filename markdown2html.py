@@ -1,5 +1,4 @@
 # This script convert markdown file into html file
-
 import sys
 import markdown
 
