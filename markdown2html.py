@@ -1,8 +1,8 @@
 #!/usr/bin/python3
-''' This script convert a markdown file into html file
+''' Write a script markdown2html.py that takes an argument 2 strings:
 
-    This script convert a markdown file into html file
-    This script convert a markdown file into html file
+    First argument is the name of the Markdown file
+    Second argument is the output file name
 '''
 
 import sys
