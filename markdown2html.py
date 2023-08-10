@@ -5,8 +5,6 @@
 import sys
 import markdown
 
-"""Function to convert md to html"""
-
 
 def convert_markdown_to_html(input_file, output_file):
     try:
