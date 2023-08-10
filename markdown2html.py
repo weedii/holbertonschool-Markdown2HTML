@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-
 """This script convert a markdown file into html file"""
 
 import sys
 import markdown
+
+# Function to convert md into html
 
 
 def convert_markdown_to_html(input_file, output_file):
