@@ -5,6 +5,8 @@
 import sys
 import markdown
 
+"""Function to convert md into html"""
+
 
 def convert_markdown_to_html(input_file, output_file):
     """Function to convert md into html"""
@@ -14,7 +16,6 @@ def convert_markdown_to_html(input_file, output_file):
             html_content = markdown.markdown(markdown_content)
             with open(output_file, 'w') as html_file:
                 html_file.write(html_content)
-    # condition if file not found
     except FileNotFoundError:
         sys.stderr.write(f"Missing {input_file}\n")
         sys.exit(1)
