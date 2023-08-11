@@ -1,11 +1,13 @@
 #!/usr/bin/python3
 """This script convert a markdown file into html file"""
 
+
 import sys
 import markdown
 
 
 def convert_markdown_to_html(input_file, output_file):
+    '''comment'''
     try:
         with open(input_file, 'r') as md_file:
             markdown_content = md_file.read()
