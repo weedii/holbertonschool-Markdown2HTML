@@ -1,19 +1,19 @@
 #!/usr/bin/python3
 """This script convert a markdown file into html file"""
 
-
 import sys
-import markdown
 
 
 def convert_markdown_to_html(input_file, output_file):
-    '''comment'''
     try:
         with open(input_file, 'r') as md_file:
             markdown_content = md_file.read()
-            html_content = markdown.markdown(markdown_content)
+            converted = []
+            for line in markdown_content:
+                converted.append(line)
             with open(output_file, 'w') as html_file:
-                html_file.write(html_content)
+                for line in converted:
+                    html_file.write(line)
     except FileNotFoundError:
         sys.stderr.write(f"Missing {input_file}\n")
         sys.exit(1)
